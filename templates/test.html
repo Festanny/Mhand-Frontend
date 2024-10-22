@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../src/styles/main.css">
 </head>
 <body>
     <div class="product-card">
-        <div class="product-card__images"><img src="" alt=""></div>
+        <div class="product-card__images">
+            <div class="swiper productGallerySlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://promily.ru/upload/iblock/54e/pyxbd8vrlqaoc5c8czrkb0ojwlkevbtc.png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://avatars.mds.yandex.net/i?id=30c010b1b17995006ee2d713f43c0b5b_l-5235167-images-thumbs&n=13" alt=""></div>
+                    <div class="swiper-slide"><img src="https://i.siteapi.org/PQrgZTRUAFVHMq_M-AbRgSxQ__Q=/fit-in/1024x768/center/top/filters:quality(95)/951878c0f48149b.s.siteapi.org/img/3ab106dc58526482383263c94b3230e6c5e9ff22.png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://pngimg.com/d/running_shoes_PNG5824.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <div class="product-card__information">
             <div class="product-card__information__price-block">
                 <div class="product-card__information__price-block__price">7 010 ₽</div>
@@ -34,7 +45,8 @@
             </div>
         </div>
         <div class="product-card__buttons">
-            <button class="button button_size_basic button_style_accent">Купить</button>
+            <button class="button button_size_basic button_style_accent buy">Купить</button>
+            <button class="button button_size_icon button_style_outline"><img src="../src/images/heart.svg" alt=""></button>
         </div>
     </div>
 
@@ -60,5 +72,8 @@
     <div class="input input_type_search input_state_static">
         <input type="text">
     </div>
+
+<script type="module" src="../src/scripts/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
