@@ -1,14 +1,82 @@
 .advantages-section {
     &__info-block {
         grid-column: span 5;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
         &__bann {
+            position: relative;
             .swiper {
                 .swiper-wrapper {
                     .swiper-slide {
+                        border-radius: 2.5rem;
+                        overflow: hidden;
                         img {
                             @include image_settings(cover);
                         }
                     }
+                }
+            }
+            .button {
+                &.prev, &.next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                    cursor: pointer;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    &.swiper-button-disabled {
+                        opacity: 0.5;
+                    }
+                }
+                &.prev {
+                    left: -2.25rem;
+                }
+                &.next {
+                    right: -2.25rem;
+                }
+            }
+        }
+        &__additional {
+            @include grid(5, 1.75rem);
+            &__item,
+            .card-adv {
+                overflow: hidden;
+                border-radius: 1rem;
+                padding: 1.75rem 1.75rem 5.417rem;
+                position: relative;
+                &_style {
+                    &_basic {
+                        background-color: $bg-primary;
+                    }
+                    &_accent {
+                        background-color: $bg-accent;
+                    }
+                }
+                &__title-desc {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    z-index: 1;
+                    &__title {
+                        @include button_1;
+                        color: $text-primary;
+                    }
+                    &__description {
+                        @include text_3;
+                        width: 60%;
+                        color: $text-primary-transparent-60;
+                    }
+                }
+                &__img {
+                    position: absolute;
+                    width: 8.75rem;
+                    height: 8.75rem;
+                    object-fit: contain;
+                    z-index: 0;
+                    bottom: 0;
+                    right: 0;
                 }
             }
         }
