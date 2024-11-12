@@ -13,4 +13,14 @@ export function slider() {
         prevEl: ".advantages-section__info-block__bann .button.prev",
       },
     });
+
+    new Swiper(".brandsSlider", {
+      slidesPerView: 5,
+      spaceBetween: 21,
+      loop: true,
+      navigation: {
+        nextEl: ".brands-section__slider .button.next",
+        prevEl: ".brands-section__slider .button.prev",
+      },
+    });
 }
